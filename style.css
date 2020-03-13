@@ -1,5 +1,5 @@
 body{
-    background-color: gray;
+    background-color: #212121;
     color: whitesmoke;
     font-family: righteous ;
 }
@@ -9,6 +9,9 @@ h1{
   justify-content: center;
 }
 
+.textarea{
+    color: green;
+}
 
 .flex-container{
     display: flex;
@@ -79,4 +82,13 @@ opacity: 1;
 animation: animate 8s linear infinite;
 }
 
+textarea.materialize-textarea{
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+}
 
+.col.m7{
+    width: 100%;
+    max-width: 70%;
+    margin-left: 15%;
+}

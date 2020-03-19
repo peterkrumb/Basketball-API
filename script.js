@@ -1,22 +1,25 @@
 $("#select-player").on("click", function(event) {
   event.preventDefault();
+  
   var playerName = $("#player-input").val();
   var settings = {
-  "url": "https://balldontlie.io/api/v1/players?search=" + playerName,
+  "url": "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?search=" + playerName,
   "method": "GET",
-  "timeout": 0,};
+  "timeout": 0,
+  
+  };
 
   //first ajax call
   $.ajax(settings).done(function (response) {
   console.log(response.data[0]);
   var playerID = (response.data[0].id);
-  var playerCity = (response.data[0].first_name + " " + response.data[0].last_name) + " dunk";
+  var playerCity = (response.data[0].first_name + " " + response.data[0].last_name);
   console.log(playerCity);
   console.log(playerID);
   
 
   var settings2 = {
-    "url": "https://balldontlie.io/api/v1/season_averages?season=2019&player_ids[]=" + playerID,
+    "url": "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2019&player_ids[]=" + playerID,
     "method": "GET",
     "timeout": 0,
   };

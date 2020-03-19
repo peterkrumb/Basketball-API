@@ -28,7 +28,7 @@ button{
     height: 60px;
     text-align: center;
     line-height: 60px;
-    color: #fff;
+    color: #000;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
@@ -91,4 +91,13 @@ textarea.materialize-textarea{
     width: 100%;
     max-width: 70%;
     margin-left: 15%;
+}
+
+#select-player{
+    color: #000;
+    font-size: 30px;
+}
+
+#loading-image{
+    background-image: url('https://i.pinimg.com/originals/79/07/bb/7907bb62e5e2d77255b4fe10770fae41.gif');
 }

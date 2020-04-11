@@ -29,7 +29,7 @@ button {
   text-align: center;
   line-height: 60px;
   color: #000;
-  font-size: 24px;
+  font-size: 33px;
   text-transform: uppercase;
   text-decoration: none;
   font-family: sans-serif;
@@ -88,36 +88,32 @@ textarea.materialize-textarea {
   margin-left: 15%;
 }
 
-#select-player {
-  color: #000;
-  font-size: 30px;
+h6 {
+  color: gray;
 }
 
-h6{
-    color: gray;
+.stats-box {
+  flex: 1;
+  margin: 15px 0px;
+  display: flex;
+  padding: 5px;
+  overflow-x: auto;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #616161;
 }
 
-.stats-box{
-    flex: 1;
-    margin: 15px 0px;
-    display: flex;
-    padding: 5px;
-    overflow-x: auto;
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: #616161;
+.indy-stat {
+  flex: 1;
+  display: flex;
+  padding: 0px 5px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #000;
 }
 
-.indy-stat{
-    flex: 1;
-    display: flex;
-    padding: 0px 5px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid #000;
-}
-
-.card-action{
+.card-action {
   margin: 18px 0px 0px 0px;
+  font-size: 33px !important;
 }

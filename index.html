@@ -6,12 +6,22 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle|Prompt|Righteous&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -22,16 +32,22 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <body>
     <div class="row">
       <div class="input-field col s6">
-        <textarea
+        <!-- <textarea
           id="player-input"
           class="materialize-textarea"
           placeholder="Search For An NBA Player (e.g. LeBron James)"
-        ></textarea>
+        ></textarea> -->
       </div>
+      <div class="container">
+        <div class="autocomplete"></div>
+      </div>
+    </div>
+    <div class="btn-div">
       <button class="card-action" id="select-player">
         GO!
       </button>

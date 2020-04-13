@@ -2,6 +2,7 @@ body {
   background-color: #212121;
   color: whitesmoke;
   font-family: righteous;
+  max-height: 100%;
 }
 
 h1 {
@@ -23,7 +24,7 @@ button {
   /* top: 50%;
     left: 50%; */
   /* transform: translate(-50%, -50%); */
-
+  cursor: pointer;
   width: 200px;
   height: 60px;
   text-align: center;
@@ -114,6 +115,68 @@ h6 {
 }
 
 .card-action {
-  margin: 18px 0px 0px 0px;
   font-size: 33px !important;
+}
+
+iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.dropdown-content {
+  background-color: #616161 !important;
+  display: block !important;
+  opacity: 1 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.input {
+  border: 1px solid gray !important;
+  border-radius: 4px !important;
+  font-family: "Rajdhani", "Roboto", "Helvetica", "Arial", "sans-serif";
+  /* text-transform: uppercase; */
+  color: #fff;
+  padding: 0 0px 0 14px !important;
+}
+
+input[type="text"].input::-webkit-input-placeholder {
+  color: gray;
+  text-transform: uppercase;
+}
+
+input[type="text"].input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: gray;
+}
+input[type="text"].input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: gray;
+}
+input[type="text"].input:-moz-placeholder {
+  /* Firefox 18- */
+  color: gray;
+}
+
+.dropdown-item {
+  font-family: "Rajdhani", "Roboto", "Helvetica", "Arial", "sans-serif";
+  color: #fff;
+  background: #616161;
+}
+
+a.dropdown-item {
+  font-size: 1.2rem;
+}
+
+.row {
+  margin-bottom: 0 !important;
+}
+
+.card {
+  background: transparent !important;
+}
+
+.btn-div {
+  text-align: center;
 }

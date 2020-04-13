@@ -157,7 +157,7 @@ const onInput = async (event) => {
       }
     }
   }
-  if (players.length === 0) {
+  if (players.length === 0 || playerName.length < 3) {
     dropdown.classList.remove("is-active");
   }
 };

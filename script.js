@@ -12,6 +12,10 @@ $("#select-player").on("click", function (event) {
 
   //first ajax call
   $.ajax(settings).done(function (response) {
+    const len = response.data.length;
+    if (len === 0) {
+      alert("There are no NBA players with that name (1979-Present)");
+    }
     var playerID = response.data[0].id;
     var playerFull =
       response.data[0].first_name + " " + response.data[0].last_name;

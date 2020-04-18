@@ -12,12 +12,9 @@ $("#select-player").on("click", function (event) {
 
   //first ajax call
   $.ajax(settings).done(function (response) {
-    console.log(response.data[0]);
     var playerID = response.data[0].id;
     var playerFull =
       response.data[0].first_name + " " + response.data[0].last_name;
-    console.log(playerFull);
-    console.log(playerID);
 
     var settings2 = {
       url:
@@ -27,8 +24,6 @@ $("#select-player").on("click", function (event) {
       timeout: 0,
     };
     $.ajax(settings2).done(function (response2) {
-      console.log(response2);
-      console.log(response2.data[0].dreb);
       $(".card-title").html(
         response.data[0].first_name +
           " " +
@@ -65,21 +60,23 @@ $("#select-player").on("click", function (event) {
       $("#pf").html(res.pf);
       $("#pts").html(res.pts);
     });
-    var queryURL =
-      "https://api.giphy.com/v1/gifs/search?api_key=rQLAu0nfEnZbuhYVAVBwo4O6Rv3Ydn1c&q=" +
-      playerFull +
-      "&limit=1&offset=0&rating=G&lang=en";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET",
-    }).then(function (response) {
-      console.log(response.data[0].url);
-      console.log(response);
-      //   $(".video").text(response.data[0].url);
-      $("iframe").attr("src", response.data[0].embed_url);
-      $("#giphylink2").attr("href", response.data[0].url);
-    });
+    const KEY = "AIzaSyBO0w765D4fGyoG7XUnwXT77br-nxcNMs8";
+    axios
+      .get("https://www.googleapis.com/youtube/v3/search", {
+        params: {
+          part: "snippet",
+          maxResults: 5,
+          type: "video",
+          key: KEY,
+          q: playerFull + "nba basketball highlights",
+        },
+      })
+      .then(function (response) {
+        const vidID = response.data.items[0].id.videoId;
+        const videoSrc = "https://www.youtube.com/embed/" + vidID;
+        document.querySelector("iframe").setAttribute("src", videoSrc);
+      });
   });
 });
 
@@ -95,7 +92,7 @@ const debounce = (func, delay = 1000) => {
   };
 };
 
-const fetchData = async (searchTerm) => {
+const fetchData = async searchTerm => {
   var playerName = $(".input").val();
   const response = await axios.get(
     "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?per_page=100&search=" +
@@ -128,22 +125,15 @@ const dropdown = document.querySelector(".dropdown");
 const resultsWrapper = document.querySelector(".results");
 const dropdownItem = document.querySelector(".dropdown-item");
 
-const onInput = async (event) => {
+const onInput = async event => {
   var playerName = $(".input").val();
   event.preventDefault();
   const players = await fetchData(event.target.value);
-  console.log(players.length);
-
-  // if (playerName.length < 3) {
-  //   dropdown.classList.remove("is-active");
-  //   return;
-  // }
 
   resultsWrapper.innerHTML = "";
   if (playerName.length >= 3 && players.length !== 0) {
     dropdown.classList.add("is-active");
     for (let player of players) {
-      console.log(player);
       const option = document.createElement("a");
       if (player.id <= 493 || player.id >= 666604) {
         option.classList.add("dropdown-item");
@@ -163,7 +153,7 @@ const onInput = async (event) => {
 };
 input.addEventListener("input", debounce(onInput, 500));
 
-document.addEventListener("click", (event) => {
+document.addEventListener("click", event => {
   if (!root.contains(event.target)) {
     dropdown.classList.remove("is-active");
   }

@@ -71,7 +71,7 @@ $("#select-player").on("click", function (event) {
           part: "snippet",
           maxResults: 5,
           type: "video",
-          key: process.env.YT_KEY,
+          key: "AIzaSyAKx3kIWs0nwHBJM5qZjT2ZOLCJUFqTaZs",
           q: playerFull + " nba basketball highlights",
         },
       })

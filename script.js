@@ -65,15 +65,14 @@ $("#select-player").on("click", function (event) {
       $("#pts").html(res.pts);
     });
 
-    const KEY = "AIzaSyBO0w765D4fGyoG7XUnwXT77br-nxcNMs8";
     axios
       .get("https://www.googleapis.com/youtube/v3/search", {
         params: {
           part: "snippet",
           maxResults: 5,
           type: "video",
-          key: KEY,
-          q: playerFull + "nba basketball highlights",
+          key: process.env.YT_KEY,
+          q: playerFull + " nba basketball highlights",
         },
       })
       .then(function (response) {

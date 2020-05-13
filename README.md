@@ -13,15 +13,22 @@ HTML
 CSS
 
 JavaScript
+
 Balldontlie API = https://www.balldontlie.io/#introduction
+
 YouTube Developers API - https://developers.google.com/youtube/v3
 
+
 Authors
+
 Peter Krumb
+
 Andrew Rogers
+
 
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
 
 Acknowledgments
 Big thanks to Arslan - https://www.youtube.com/channel/UCe1NM6d7y7O1Q7ZKJ4lLSFw?pbjreload=10

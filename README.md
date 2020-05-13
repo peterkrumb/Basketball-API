@@ -9,7 +9,9 @@ https://admiring-heisenberg-b3de22.netlify.com/
 ## Built With
 
 HTML
+
 CSS
+
 JavaScript
 Balldontlie API = https://www.balldontlie.io/#introduction
 YouTube Developers API - https://developers.google.com/youtube/v3

@@ -19,6 +19,7 @@ Balldontlie API = https://www.balldontlie.io/#introduction
 YouTube Developers API - https://developers.google.com/youtube/v3
 
 
+
 Authors
 
 Peter Krumb
@@ -26,8 +27,10 @@ Peter Krumb
 Andrew Rogers
 
 
+
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
 
 
 Acknowledgments

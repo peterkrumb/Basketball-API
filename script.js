@@ -22,7 +22,7 @@ $("#select-player").on("click", function (event) {
 
     var settings2 = {
       url:
-        "https://ancient-tundra-67254.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2019&player_ids[]=" +
+        "https://ancient-tundra-67254.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=" +
         playerID,
       method: "GET",
       timeout: 0,
@@ -33,7 +33,7 @@ $("#select-player").on("click", function (event) {
           " " +
           response.data[0].last_name +
           " " +
-          "2019-2020 Season Averages"
+          "2020-2021 Season Averages"
       );
       $(".player-vitals").html(
         "Position: " +

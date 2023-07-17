@@ -4,7 +4,7 @@ $("#select-player").on("click", function (event) {
   var playerName = $(".input").val();
   var settings = {
     url:
-      "https://ancient-tundra-67254.herokuapp.com/https://balldontlie.io/api/v1/players?search=" +
+      "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?search=" +
       playerName,
     method: "GET",
     timeout: 0,
@@ -22,7 +22,7 @@ $("#select-player").on("click", function (event) {
 
     var settings2 = {
       url:
-        "https://ancient-tundra-67254.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=" +
+        "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=" +
         playerID,
       method: "GET",
       timeout: 0,
@@ -98,7 +98,7 @@ const debounce = (func, delay = 1000) => {
 const fetchData = async searchTerm => {
   var playerName = $(".input").val();
   const response = await axios.get(
-    "https://ancient-tundra-67254.herokuapp.com/https://balldontlie.io/api/v1/players?per_page=100&search=" +
+    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?per_page=100&search=" +
       playerName,
     {
       params: {

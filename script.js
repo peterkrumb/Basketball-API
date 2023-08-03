@@ -3,9 +3,7 @@ $("#select-player").on("click", function (event) {
 
   var playerName = $(".input").val();
   var settings = {
-    url:
-      "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?search=" +
-      playerName,
+    url: "https://balldontlie.io/api/v1/players?search=" + playerName,
     method: "GET",
     timeout: 0,
   };
@@ -22,7 +20,7 @@ $("#select-player").on("click", function (event) {
 
     var settings2 = {
       url:
-        "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=" +
+        "https://balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=" +
         playerID,
       method: "GET",
       timeout: 0,
@@ -95,11 +93,10 @@ const debounce = (func, delay = 1000) => {
   };
 };
 
-const fetchData = async searchTerm => {
+const fetchData = async (searchTerm) => {
   var playerName = $(".input").val();
   const response = await axios.get(
-    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players?per_page=100&search=" +
-      playerName,
+    "https://balldontlie.io/api/v1/players?per_page=100&search=" + playerName,
     {
       params: {
         playerName: searchTerm,
@@ -128,7 +125,7 @@ const dropdown = document.querySelector(".dropdown");
 const resultsWrapper = document.querySelector(".results");
 const dropdownItem = document.querySelector(".dropdown-item");
 
-const onInput = async event => {
+const onInput = async (event) => {
   var playerName = $(".input").val();
   event.preventDefault();
   const players = await fetchData(event.target.value);
@@ -156,7 +153,7 @@ const onInput = async event => {
 };
 input.addEventListener("input", debounce(onInput, 500));
 
-document.addEventListener("click", event => {
+document.addEventListener("click", (event) => {
   if (!root.contains(event.target)) {
     dropdown.classList.remove("is-active");
   }
